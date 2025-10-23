@@ -2,19 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.svistoyanov.eks</groupId>
         <artifactId>etcd-keys-service-parent</artifactId>
+        <groupId>com.svistoyanov.eks</groupId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>eks-server</artifactId>
+    <name>EKS Server</name>
+    <packaging>jar</packaging>
 
-    <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.svistoyanov.eks</groupId>
+            <artifactId>eks-business-logic</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
