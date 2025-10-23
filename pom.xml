@@ -29,6 +29,11 @@
         <plugin.surefire.version>2.22.1</plugin.surefire.version>
         <plugin.maven.jar.version>3.1.2</plugin.maven.jar.version>
         <plugin.maven.enforcer.version>3.0.0-M2</plugin.maven.enforcer.version>
+
+        <junit-jupiter.version>5.8.1</junit-jupiter.version>
+        <!-- Logger -->
+        <slf4j.version>1.7.32</slf4j.version>
+        <logback.version>1.2.6</logback.version>
     </properties>
 
     <organization>
@@ -53,8 +58,27 @@
                 <artifactId>eks-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- External dependencies -->
 
+            <!-- External dependencies -->
+            <!-- Logger -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <!-- Tests -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
