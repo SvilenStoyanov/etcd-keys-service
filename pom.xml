@@ -8,7 +8,7 @@
     <artifactId>etcd-keys-service-parent</artifactId>
     <groupId>com.svistoyanov.eks</groupId>
     <name>Etcd Keys Service</name>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -37,7 +37,7 @@
     </organization>
 
     <scm>
-        <developerConnection>scm:git:ssh://bitbucket.org:svistoyanov/etcd-keys-service.git</developerConnection>
+        <developerConnection>scm:git:ssh://github.com:SvilenStoyanov/etcd-keys-service.git</developerConnection>
     </scm>
 
     <dependencyManagement>
