@@ -19,19 +19,19 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.min.version>3.3.9</maven.min.version>
+        <maven.min.version>3.8.0</maven.min.version>
         <java.version>21</java.version>
 
         <!-- Plugin versions -->
-        <plugin.maven.compiler.version>3.8.1</plugin.maven.compiler.version>
-        <plugin.maven.source.version>3.1.0</plugin.maven.source.version>
-        <plugin.maven.resources.version>3.0.1</plugin.maven.resources.version>
-        <plugin.surefire.version>2.22.1</plugin.surefire.version>
-        <plugin.maven.jar.version>3.1.2</plugin.maven.jar.version>
-        <plugin.maven.enforcer.version>3.0.0-M2</plugin.maven.enforcer.version>
+        <plugin.maven.compiler.version>3.13.0</plugin.maven.compiler.version>
+        <plugin.maven.jar.version>3.4.1</plugin.maven.jar.version>
+        <plugin.maven.enforcer.version>3.3.0</plugin.maven.enforcer.version>
+        <plugin.maven.source.version>3.3.1</plugin.maven.source.version>
+        <plugin.maven.resources.version>3.3.1</plugin.maven.resources.version>
+        <plugin.surefire.version>3.2.5</plugin.surefire.version>
 
         <junit-jupiter.version>5.8.1</junit-jupiter.version>
-        <spring-boot.version>2.5.6</spring-boot.version>
+        <spring-boot.version>3.5.6</spring-boot.version>
 
         <!-- Logger -->
         <slf4j.version>1.7.32</slf4j.version>
