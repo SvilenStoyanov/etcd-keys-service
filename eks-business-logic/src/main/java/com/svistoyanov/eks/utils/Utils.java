@@ -15,6 +15,21 @@ public class Utils {
         // static only
     }
 
+    public static <T> void verifyNotNull(T arg, ValidationResult result, Printable message) {
+        verifyTrue(arg != null, result, message);
+    }
+
+    public static void verifyTrue(boolean condition, ValidationResult result, Printable message) {
+        verifyFalse(!condition, result, message);
+    }
+
+    public static void verifyFalse(boolean condition, ValidationResult result, Printable message) {
+        if (condition) {
+            logger.error(message.print());
+            result.addError(message);
+        }
+    }
+
     public static void verifyTrue(String message, boolean condition) {
         verifyFalse(message, !condition);
     }

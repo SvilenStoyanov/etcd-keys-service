@@ -2,9 +2,9 @@ package com.svistoyanov.eks;
 
 import com.svistoyanov.eks.utils.exception.ConflictException;
 import com.svistoyanov.eks.utils.exception.NotFoundException;
-import com.svistoyanov.eks.kvs.KeyValue;
-import com.svistoyanov.eks.kvs.KvSnapshot;
-import com.svistoyanov.eks.kvs.KvsServiceProvider;
+import com.svistoyanov.eks.utils.kvs.KeyValue;
+import com.svistoyanov.eks.utils.kvs.KvSnapshot;
+import com.svistoyanov.eks.utils.kvs.KvsServiceProvider;
 import com.svistoyanov.eks.transformer.KeyIdTransformer;
 import com.svistoyanov.eks.utils.exception.ValidationException;
 import com.svistoyanov.eks.utils.ValidationResult;

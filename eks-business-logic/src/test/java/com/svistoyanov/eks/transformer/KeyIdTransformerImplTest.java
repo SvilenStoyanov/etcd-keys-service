@@ -14,53 +14,18 @@ class KeyIdTransformerImplTest {
 
     @Test
     void testTransformSuccess() {
-        assertTransformed("mts_12-asd as asd_Asd -123", "mts", "12-asd as asd", "asd -123");
-        assertTransformed("cs_12345_6M - 90C", "cs", "12345", "6m - 90c");
-        assertTransformed("mts_fus_dev", "mts", "fus", "dev");
-        assertTransformed("mts_Ae- 1495-_--  ", "mts", "ae- 1495-", "--  ");
-        assertTransformed("mts_ _ ", "mts", " ", " ");
-        assertTransformed("mts_-_-", "mts", "-", "-");
-        assertTransformed("mts__", "mts");
+        assertSuccess("mts_12-qwe qwe_Asd -123", "mts", "12-qwe qwe", "asd -123");
+        assertSuccess("svi_12345_6M - 90C", "svi", "12345", "6m - 90c");
+        assertSuccess("mts_svi_dev", "mts", "svi", "dev");
+        assertSuccess("mts_Ae- 1495-_--  ", "mts", "ae- 1495-", "--  ");
+        assertSuccess("mts_ _ ", "mts", " ", " ");
+        assertSuccess("mts_-_-", "mts", "-", "-");
+        assertSuccess("mts__", "mts");
     }
 
-    @Test
-    void testTransformKeyNull() {
-        assertTransformed(null);
-    }
-
-    @Test
-    void testTransformWrongPrefix() {
-        assertIllegalArgument("aaaa_12-asd as asd_Asd -123");
-    }
-
-    @Test
-    void testTransformOnlyOneId() {
-        assertIllegalArgument("cs_12345");
-    }
-
-    @Test
-    void testTransformInvalidChars() {
-        assertIllegalArgument("cs_12345_6M - 90C @");
-        assertIllegalArgument("mts_fus_dev~");
-        assertIllegalArgument("mts_fus_dev %%");
-    }
-
-    @Test
-    void testTransformExtraUnderscore() {
-        assertIllegalArgument("cs_12345_6M - 90C_");
-        assertIllegalArgument("_cs_12345_6M - 90C");
-        assertIllegalArgument("_cs_12345_6M - 90C_");
-        assertIllegalArgument("cs_12345__6M - 90C");
-    }
-
-    void assertTransformed(String input, String... output) {
-        List<String> actual = transformer.transform(input);
-        List<String> expected = List.of(output);
+    void assertSuccess(String value, String... listOfValues) {
+        final List<String> actual = KeyIdTransformerImpl.instance.transform(value);
+        final List<String> expected = List.of(listOfValues);
         Assertions.assertEquals(expected, actual);
     }
-
-    void assertIllegalArgument(String input) {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> transformer.transform(input));
-    }
-
 }

@@ -1,4 +1,4 @@
-package com.svistoyanov.eks.kvs;
+package com.svistoyanov.eks.utils.kvs;
 
 import java.util.List;
 
