@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--
+       The levels are as follows, the log level logs the described level + all below it.
+       ALL
+       TRACE
+       DEBUG
+       INFO
+       WARN
+       ERROR
+       OFF   - no logging at all
+   -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{40}) %blue(-) %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/runtime/logs/etcd-keys-service.log</file>
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/runtime/logs/archived/%d{yyyy-MM, aux}/etcd-keys-service-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Default -->
+    <springProfile name="dev | staging">
+        <logger name="com.svistoyanov.eks" level="DEBUG"/>
+    </springProfile>
+
+    <springProfile name="production">
+        <logger name="com.svistoyanov.eks" level="INFO"/>
+    </springProfile>
+
+    <!-- 3rd party -->
+    <logger name="org.apache" level="ERROR"/>
+    <logger name="org.springframework" level="ERROR"/>
+    <logger name="org.springframework.boot.autoconfigure" level="ERROR"/>
+    <logger name="org.springframework.boot.actuate" level="ERROR"/>
+    <logger name="org.springframework.boot.actuate.endpoint.web.servlet" level="ERROR"/>
+    <logger name="org.springframework.web.servlet" level="ERROR"/>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation" level="ERROR"/>
+
+    <logger name="io.grpc.netty" level="OFF"/>
+
+    <root level="ERROR">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+</configuration>
