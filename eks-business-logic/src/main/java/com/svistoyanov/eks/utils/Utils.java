@@ -38,7 +38,10 @@ public class Utils {
         if (condition) {
             alert(message, new IllegalArgumentException(message));
         }
+    }
 
+    public static void verifyNotBlank(String arg, ValidationResult result, Printable message) {
+        verifyFalse(arg.isBlank(), result, message);
     }
 
     private static void alert(String msg, RuntimeException e) {

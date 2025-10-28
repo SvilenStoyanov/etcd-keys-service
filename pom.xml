@@ -36,6 +36,9 @@
         <!-- Logger -->
         <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.6</logback.version>
+
+        <jetcd.version>0.8.5</jetcd.version>
+        <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
     </properties>
 
     <organization>
@@ -74,6 +77,13 @@
                 <version>${logback.version}</version>
             </dependency>
 
+            <!-- JETCD - Client for ETCD -->
+            <dependency>
+                <groupId>io.etcd</groupId>
+                <artifactId>jetcd-core</artifactId>
+                <version>${jetcd.version}</version>
+            </dependency>
+
             <!-- Tests -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
@@ -90,9 +100,20 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>${jakarta.validation-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -151,7 +172,6 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <DependencyConvergence/>
                                     <requireMavenVersion>
                                         <version>[${maven.min.version},)</version>
                                     </requireMavenVersion>
