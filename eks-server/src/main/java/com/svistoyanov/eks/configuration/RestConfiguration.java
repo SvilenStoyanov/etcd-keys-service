@@ -1,11 +1,11 @@
 package com.svistoyanov.eks.configuration;
 
 import com.svistoyanov.eks.PublicKeyService;
-import com.svistoyanov.eks.api.ObjectMapperSingleton;
+import com.svistoyanov.eks.api.dto.mapper.ObjectMapperSingleton;
 import com.svistoyanov.eks.api.dto.EksErrorDto;
-import com.svistoyanov.eks.api.exception.EksExceptionHandler;
-import com.svistoyanov.eks.api.exception.EksResponseFactory;
-import com.svistoyanov.eks.api.rest.PublicKeyRestServiceImpl;
+import com.svistoyanov.eks.exception.EksExceptionHandler;
+import com.svistoyanov.eks.exception.EksResponseFactory;
+import com.svistoyanov.eks.rest.PublicKeyRestServiceImpl;
 import com.svistoyanov.eks.configuration.spring.BuildInfoContributor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

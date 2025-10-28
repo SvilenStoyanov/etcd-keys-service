@@ -1,4 +1,4 @@
-package com.svistoyanov.eks.api.exception;
+package com.svistoyanov.eks.exception;
 
 import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;

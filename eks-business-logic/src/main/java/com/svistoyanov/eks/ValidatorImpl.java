@@ -15,7 +15,7 @@ public class ValidatorImpl implements Validator{
     private static final Printable         NULL_MESSAGE      = new ConstantPrintable("Key ID must not be null.");
     private static final TemplatePrintable PATTERN_NOT_MATCH = new TemplatePrintable("Key ID [{0}] does not match the pattern: {1}");
 
-    private static final String KEY_ID_PATTERN = "^(cs|mts)(_[-A-Za-z0-9\\s]*){2}$";
+    private static final String KEY_ID_PATTERN = "^(svi|mts)(_[-A-Za-z0-9\\s]*){2}$";
 
     @Override
     public ValidationResult validate(String keyId) {

@@ -1,4 +1,4 @@
-package com.svistoyanov.eks.api;
+package com.svistoyanov.eks.api.dto.mapper;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.SerializableString;

@@ -16,6 +16,10 @@
     <dependencies>
         <dependency>
             <groupId>com.svistoyanov.eks</groupId>
+            <artifactId>eks-server-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.svistoyanov.eks</groupId>
             <artifactId>eks-business-logic</artifactId>
         </dependency>
 

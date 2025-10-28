@@ -1,4 +1,4 @@
-package com.svistoyanov.eks.api.exception;
+package com.svistoyanov.eks.api.dto.exception;
 
 public class InvalidEnumValueException extends RuntimeException {
 

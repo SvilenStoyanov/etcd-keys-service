@@ -1,6 +1,7 @@
-package com.svistoyanov.eks.api.rest;
+package com.svistoyanov.eks.rest;
 
 import com.svistoyanov.eks.PublicKeyService;
+import com.svistoyanov.eks.api.rest.PublicKeyRestService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -15,12 +15,13 @@
         <module>eks-business-logic</module>
         <module>eks-server</module>
         <module>eks-integration-tests</module>
+        <module>eks-server-api</module>
     </modules>
 
     <properties>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.min.version>3.8.0</maven.min.version>
-        <java.version>21</java.version>
 
         <!-- Plugin versions -->
         <plugin.maven.compiler.version>3.13.0</plugin.maven.compiler.version>
@@ -61,6 +62,11 @@
             <dependency>
                 <groupId>com.svistoyanov.eks</groupId>
                 <artifactId>eks-server</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.svistoyanov.eks</groupId>
+                <artifactId>eks-server-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

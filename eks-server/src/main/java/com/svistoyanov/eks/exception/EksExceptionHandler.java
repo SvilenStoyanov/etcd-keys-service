@@ -1,4 +1,4 @@
-package com.svistoyanov.eks.api.exception;
+package com.svistoyanov.eks.exception;
 
 import com.svistoyanov.eks.utils.exception.ConcurrentException;
 import com.svistoyanov.eks.utils.exception.ConflictException;

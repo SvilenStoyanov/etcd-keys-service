@@ -1,6 +1,6 @@
 package com.svistoyanov.eks.api.dto;
 
-import com.svistoyanov.eks.api.exception.InvalidEnumValueException;
+import com.svistoyanov.eks.api.dto.exception.InvalidEnumValueException;
 
 public enum ErrorCodesDto {
 
